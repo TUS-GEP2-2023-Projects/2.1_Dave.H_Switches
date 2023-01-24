@@ -5,6 +5,9 @@ using UnityEngine;
 public class SwitchActivator : MonoBehaviour
 {
     public GameObject switchObject;
+   
+ 
+
     public float raycastDistance = 5f; 
   
     
@@ -20,15 +23,16 @@ public class SwitchActivator : MonoBehaviour
             {
                 if ( Input.GetKeyDown(KeyCode.Space))
                 {
-                    switchObject.GetComponent<Switch>(). Activate();
+                    ;
                 }
             }
         }
 
     }
+    Vector3 PlayerPosition()
+    {
+        return GameObject.FindGameObjectWithTag("Player").transform.position;
+    }
+
 }
 
-Vector3 PlayerPosition()
-{
-    return GameObject.FindGameObjectWithTag("Player").transform.position;
-}
