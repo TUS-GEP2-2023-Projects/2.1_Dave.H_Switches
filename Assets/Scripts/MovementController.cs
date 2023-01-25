@@ -36,5 +36,8 @@ public class MovementController: MonoBehaviour {
 		theRigidBody.velocity = new Vector2 (maxHorixontalSpeed * speedMultiplier, theRigidBody.velocity.y);
 	}
 
-
+	private void OnTriggerEnter2D(Collider2D collision)
+	{
+		Debug.Log("Player collided with " + collision.gameObject.name);
+	}
 }
